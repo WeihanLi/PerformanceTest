@@ -1,7 +1,6 @@
-﻿using BenchmarkDotNet.Running;
-using PerformanceTest.EnumerableTest;
-using PerformanceTest.SerializerTest;
-using System;
+﻿using System;
+using BenchmarkDotNet.Running;
+using PerformanceTest.RandomTest;
 
 namespace PerformanceTest
 {
@@ -9,8 +8,8 @@ namespace PerformanceTest
     {
         public static void Main(string[] args)
         {
-            BenchmarkRunner.Run<JsonSerializeTest>();
-            BenchmarkRunner.Run<EnumerableEmptyTest>();
+            BenchmarkRunner.Run<RandomPerfTest>();
+            // BenchmarkRunner.Run<NewInstanceTest>();
             Console.Read();
         }
     }
