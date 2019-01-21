@@ -8,9 +8,9 @@ Intel Core i5-3470 CPU 3.20GHz (Ivy Bridge), 1 CPU, 4 logical and 4 physical cor
 
 
 ```
-|                         Method |     Mean |     Error |    StdDev |
-|------------------------------- |---------:|----------:|----------:|
-|            RandomOrderByRandom | 2.897 us | 0.0470 us | 0.0440 us |
-|              RandomOrderByGuid | 1.962 us | 0.0221 us | 0.0207 us |
-|          RandomOrderByGuidHash | 1.908 us | 0.0166 us | 0.0155 us |
-| RandomOrderByStupidRandomIndex | 3.078 us | 0.0370 us | 0.0328 us |
+|                         Method |       Mean |      Error |     StdDev |
+|------------------------------- |-----------:|-----------:|-----------:|
+|            RandomOrderByRandom |   187.3 us |  0.7057 us |  0.6601 us |
+|              RandomOrderByGuid |   309.1 us |  1.6273 us |  1.5222 us |
+|          RandomOrderByGuidHash |   265.6 us |  1.7944 us |  1.6785 us |
+| RandomOrderByStupidRandomIndex | 3,474.3 us | 29.6379 us | 27.7233 us |

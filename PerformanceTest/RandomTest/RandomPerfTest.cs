@@ -8,7 +8,7 @@ namespace PerformanceTest.RandomTest
 {
     public class RandomPerfTest
     {
-        private readonly int[] _testData = Enumerable.Range(0, 10).ToArray();
+        private readonly int[] _testData = Enumerable.Range(0, 1000).ToArray();
 
         [Benchmark]
         public int[] RandomOrderByRandom()
