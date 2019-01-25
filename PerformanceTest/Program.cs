@@ -8,7 +8,7 @@ namespace PerformanceTest
     {
         public static void Main(string[] args)
         {
-            BenchmarkRunner.Run<RandomPerfTest>();
+            BenchmarkRunner.Run<RandomListPerfTest>();
             // BenchmarkRunner.Run<NewInstanceTest>();
             Console.Read();
         }

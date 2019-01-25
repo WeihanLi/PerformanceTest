@@ -6,7 +6,7 @@ using WeihanLi.Extensions;
 
 namespace PerformanceTest.RandomTest
 {
-    public class RandomPerfTest
+    public class RandomListPerfTest
     {
         private readonly int[] _testData = Enumerable.Range(0, 1000).ToArray();
 
