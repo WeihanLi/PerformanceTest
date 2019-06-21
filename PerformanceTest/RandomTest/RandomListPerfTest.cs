@@ -11,10 +11,17 @@ namespace PerformanceTest.RandomTest
         private readonly int[] _testData = Enumerable.Range(0, 1000).ToArray();
 
         [Benchmark]
+        public int[] RandomOrderByRandom0()
+        {
+            var random = new Random();
+            return _testData.OrderBy(_ => random.Next(_testData.Length)).ToArray();
+        }
+
+        [Benchmark]
         public int[] RandomOrderByRandom()
         {
             var random = new Random();
-            return Enumerable.Range(0, _testData.Length).OrderBy(_ => random.Next(1000)).Select(i => _testData[i]).ToArray();
+            return Enumerable.Range(0, _testData.Length).OrderBy(_ => random.Next(_testData.Length)).Select(i => _testData[i]).ToArray();
         }
 
         [Benchmark]

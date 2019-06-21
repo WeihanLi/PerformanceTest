@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>RandomPerfTest</title>
+<title>RandomListPerfTest</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -13,9 +13,9 @@
 </head>
 <body>
 <pre><code>
-BenchmarkDotNet=v0.10.14, OS=Windows 10.0.17134
+BenchmarkDotNet=v0.10.14, OS=Windows 10.0.18362
 Intel Core i5-3470 CPU 3.20GHz (Ivy Bridge), 1 CPU, 4 logical and 4 physical cores
-.NET Core SDK=2.2.102
+.NET Core SDK=3.0.100-preview5-011568
   [Host]     : .NET Core 2.0.9 (CoreCLR 4.6.26614.01, CoreFX 4.6.26614.01), 64bit RyuJIT
   DefaultJob : .NET Core 2.0.9 (CoreCLR 4.6.26614.01, CoreFX 4.6.26614.01), 64bit RyuJIT
 </code></pre>
@@ -24,10 +24,11 @@ Intel Core i5-3470 CPU 3.20GHz (Ivy Bridge), 1 CPU, 4 logical and 4 physical cor
 <table>
 <thead><tr><th>                  Method</th><th>Mean</th><th>Error</th><th>StdDev</th>
 </tr>
-</thead><tbody><tr><td>RandomOrderByRandom</td><td>187.3 us</td><td>0.7057 us</td><td>0.6601 us</td>
-</tr><tr><td>RandomOrderByGuid</td><td>309.1 us</td><td>1.6273 us</td><td>1.5222 us</td>
-</tr><tr><td>RandomOrderByGuidHash</td><td>265.6 us</td><td>1.7944 us</td><td>1.6785 us</td>
-</tr><tr><td>RandomOrderByStupidRandomIndex</td><td>3,474.3 us</td><td>29.6379 us</td><td>27.7233 us</td>
+</thead><tbody><tr><td>RandomOrderByRandom0</td><td>186.9 us</td><td>1.9582 us</td><td>1.8317 us</td>
+</tr><tr><td>RandomOrderByRandom</td><td>184.2 us</td><td>1.3392 us</td><td>1.2527 us</td>
+</tr><tr><td>RandomOrderByGuid</td><td>300.3 us</td><td>1.7463 us</td><td>1.5481 us</td>
+</tr><tr><td>RandomOrderByGuidHash</td><td>270.4 us</td><td>0.6675 us</td><td>0.5917 us</td>
+</tr><tr><td>RandomOrderByStupidRandomIndex</td><td>3,417.4 us</td><td>30.6603 us</td><td>27.1796 us</td>
 </tr></tbody></table>
 </body>
 </html>
