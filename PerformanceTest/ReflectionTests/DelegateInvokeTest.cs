@@ -7,23 +7,17 @@ namespace PerformanceTest.ReflectionTests
 {
     public class DelegateInvokeTest
     {
-        private readonly object _func, _func1;
+        private readonly Delegate _func, _func1;
         private readonly string parameter;
-        private readonly MethodInfo _methodInfo, _methodInfo1;
-        private readonly object _methodTarget, _methodTarget1;
+        private readonly int paramInt;
 
         public DelegateInvokeTest()
         {
             parameter = "Test";
-            var func = (Func<string, string>)(str => str);
-            var func1 = (Func<string, int>)(str => 0);
-            _func = func;
-            _func1 = func1;
+            paramInt = 1;
 
-            _methodInfo = func.Method;
-            _methodTarget = func.Target;
-            _methodInfo1 = func1.Method;
-            _methodTarget1 = func1.Target;
+            _func = (Func<string, string>)(str => str);
+            _func1 = (Func<int, int>)(val => 0);
         }
 
         [Benchmark(Baseline = true)]
@@ -35,31 +29,31 @@ namespace PerformanceTest.ReflectionTests
         [Benchmark]
         public object InvokeBoxing()
         {
-            return ((Func<string, int>)_func1).Invoke(parameter);
+            return ((Func<int, int>)_func1).Invoke(paramInt);
         }
 
         [Benchmark]
         public object DynamicInvoke()
         {
-            return ((Delegate)_func).DynamicInvoke(parameter);
+            return _func.DynamicInvoke(parameter);
         }
 
         [Benchmark]
         public object DynamicInvokeBoxing()
         {
-            return ((Delegate)_func1).DynamicInvoke(parameter);
+            return _func1.DynamicInvoke(paramInt);
         }
 
         [Benchmark]
         public object MethodInfoInvoke()
         {
-            return _methodInfo?.Invoke(_methodTarget, new object[] { parameter });
+            return _func.Method?.Invoke(_func.Target, new object[] { parameter });
         }
 
         [Benchmark]
         public object MethodInfoInvokeBoxing()
         {
-            return _methodInfo1?.Invoke(_methodTarget1, new object[] { parameter });
+            return _func1.Method?.Invoke(_func1.Target, new object[] { paramInt });
         }
 
         [Benchmark]
@@ -77,7 +71,7 @@ namespace PerformanceTest.ReflectionTests
             var funcType = typeof(Func<,>).MakeGenericType(typeof(string), typeof(int));
             var method = funcType.GetProperty("Method")?.GetValueGetter()?.Invoke(_func1) as MethodInfo;
             var target = funcType.GetProperty("Target")?.GetValueGetter()?.Invoke(_func1);
-            return method?.Invoke(target, new object[] { parameter });
+            return method?.Invoke(target, new object[] { paramInt });
         }
     }
 }
