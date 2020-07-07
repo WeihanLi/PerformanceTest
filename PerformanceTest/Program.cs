@@ -1,6 +1,6 @@
 ﻿using System;
 using BenchmarkDotNet.Running;
-using PerformanceTest.ReflectionTests;
+using PerformanceTest.DummyTests;
 
 namespace PerformanceTest
 {
@@ -13,7 +13,9 @@ namespace PerformanceTest
             // BenchmarkRunner.Run<RedisSetMembersTest>();
             // BenchmarkRunner.Run<FluentFormatterTest>();
 
-            BenchmarkRunner.Run<DelegateInvokeTest>();
+            // BenchmarkRunner.Run<DelegateInvokeTest>();
+
+            BenchmarkRunner.Run<IsValueTypeTest>();
 
             Console.Read();
         }
