@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <Optimize>true</Optimize>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,8 +14,7 @@
 
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.12.1" />
-    <PackageReference Include="WeihanLi.Common" Version="1.0.33" />
-    <PackageReference Include="WeihanLi.Npoi" Version="1.8.2" />
-    <PackageReference Include="WeihanLi.Redis" Version="1.5.9" />
+    <PackageReference Include="WeihanLi.Common" Version="1.0.44" />
+    <PackageReference Include="WeihanLi.Redis" Version="1.7.0" />
   </ItemGroup>
 </Project>

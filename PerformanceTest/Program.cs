@@ -1,6 +1,6 @@
 ﻿using System;
 using BenchmarkDotNet.Running;
-using PerformanceTest.ReflectionTests;
+using PerformanceTest.CollectionTest;
 
 namespace PerformanceTest
 {
@@ -11,10 +11,10 @@ namespace PerformanceTest
             // BenchmarkRunner.Run<RandomListPerfTest>();
             // BenchmarkRunner.Run<NewInstanceTest>();
             // BenchmarkRunner.Run<RedisSetMembersTest>();
-            // BenchmarkRunner.Run<FluentFormatterTest>();
+            // BenchmarkRunner.Run<EnumerableEmptyTest>();
+            // BenchmarkRunner.Run<DelegateInvokeTest>();
 
-            BenchmarkRunner.Run<DelegateInvokeTest>();
-
+            BenchmarkRunner.Run<ConcurrentSetTest>();
             Console.Read();
         }
     }
