@@ -1,6 +1,6 @@
 ﻿using System;
 using BenchmarkDotNet.Running;
-using PerformanceTest.CollectionTest;
+using PerformanceTest.SerializerTest;
 
 namespace PerformanceTest
 {
@@ -14,7 +14,9 @@ namespace PerformanceTest
             // BenchmarkRunner.Run<EnumerableEmptyTest>();
             // BenchmarkRunner.Run<DelegateInvokeTest>();
 
-            BenchmarkRunner.Run<ConcurrentSetTest>();
+            // BenchmarkRunner.Run<ConcurrentSetTest>();
+
+            BenchmarkRunner.Run<JsonPrettifyTest>();
             Console.Read();
         }
     }
