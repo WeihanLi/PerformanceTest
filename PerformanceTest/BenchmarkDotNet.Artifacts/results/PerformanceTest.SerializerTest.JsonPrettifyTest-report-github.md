@@ -8,8 +8,9 @@ Intel Core i5-6300U CPU 2.40GHz (Skylake), 1 CPU, 4 logical and 2 physical cores
 
 
 ```
-|                  Method |     Mean |     Error |    StdDev | Ratio | RatioSD |
-|------------------------ |---------:|----------:|----------:|------:|--------:|
-| SystemJson_JsonDocument | 1.887 μs | 0.0365 μs | 0.0546 μs |  0.42 |    0.02 |
-|    JsonNet_ReaderWriter | 2.125 μs | 0.0814 μs | 0.2200 μs |  0.46 |    0.06 |
-|  JsonNet_JTokenToString | 4.661 μs | 0.1835 μs | 0.4928 μs |  1.00 |    0.00 |
+|                            Method |     Mean |     Error |    StdDev | Ratio | RatioSD |
+|---------------------------------- |---------:|----------:|----------:|------:|--------:|
+|    SystemJson_JsonDocument_Writer | 1.760 μs | 0.0348 μs | 0.0499 μs |  0.57 |    0.03 |
+| SystemJson_JsonDocument_Serialize | 7.588 μs | 0.1456 μs | 0.1733 μs |  2.48 |    0.13 |
+|              JsonNet_ReaderWriter | 2.000 μs | 0.0396 μs | 0.1044 μs |  0.65 |    0.05 |
+|            JsonNet_JTokenToString | 3.088 μs | 0.0610 μs | 0.1300 μs |  1.00 |    0.00 |

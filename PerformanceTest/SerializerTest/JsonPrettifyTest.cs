@@ -17,7 +17,7 @@ namespace PerformanceTest.SerializerTest
 
 
         [Benchmark]
-        public string SystemJson_JsonDocument()
+        public string SystemJson_JsonDocument_Writer()
         {
             using var doc = JsonDocument.Parse(TestJsonString);
             using var ms = new MemoryStream();
@@ -26,6 +26,14 @@ namespace PerformanceTest.SerializerTest
             jsonWriter.Flush();
 
             var formattedJson = Encoding.UTF8.GetString(ms.ToArray());
+            return formattedJson;
+        }
+
+        [Benchmark]
+        public string SystemJson_JsonDocument_Serialize()
+        {
+            using var doc = JsonDocument.Parse(TestJsonString);
+            var formattedJson = System.Text.Json.JsonSerializer.Serialize(doc, new JsonSerializerOptions { WriteIndented = true });
             return formattedJson;
         }
 

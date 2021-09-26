@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>PerformanceTest.SerializerTest.JsonPrettifyTest-20210926-220657</title>
+<title>PerformanceTest.SerializerTest.JsonPrettifyTest-20210927-000044</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -22,11 +22,12 @@ Intel Core i5-6300U CPU 2.40GHz (Skylake), 1 CPU, 4 logical and 2 physical cores
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>           Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio</th><th>RatioSD</th>
+<thead><tr><th>                     Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio</th><th>RatioSD</th>
 </tr>
-</thead><tbody><tr><td>SystemJson_JsonDocument</td><td>1.887 &mu;s</td><td>0.0365 &mu;s</td><td>0.0546 &mu;s</td><td>0.42</td><td>0.02</td>
-</tr><tr><td>JsonNet_ReaderWriter</td><td>2.125 &mu;s</td><td>0.0814 &mu;s</td><td>0.2200 &mu;s</td><td>0.46</td><td>0.06</td>
-</tr><tr><td>JsonNet_JTokenToString</td><td>4.661 &mu;s</td><td>0.1835 &mu;s</td><td>0.4928 &mu;s</td><td>1.00</td><td>0.00</td>
+</thead><tbody><tr><td>SystemJson_JsonDocument_Writer</td><td>1.760 &mu;s</td><td>0.0348 &mu;s</td><td>0.0499 &mu;s</td><td>0.57</td><td>0.03</td>
+</tr><tr><td>SystemJson_JsonDocument_Serialize</td><td>7.588 &mu;s</td><td>0.1456 &mu;s</td><td>0.1733 &mu;s</td><td>2.48</td><td>0.13</td>
+</tr><tr><td>JsonNet_ReaderWriter</td><td>2.000 &mu;s</td><td>0.0396 &mu;s</td><td>0.1044 &mu;s</td><td>0.65</td><td>0.05</td>
+</tr><tr><td>JsonNet_JTokenToString</td><td>3.088 &mu;s</td><td>0.0610 &mu;s</td><td>0.1300 &mu;s</td><td>1.00</td><td>0.00</td>
 </tr></tbody></table>
 </body>
 </html>
