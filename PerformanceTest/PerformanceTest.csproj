@@ -11,6 +11,8 @@
     <Compile Remove="BenchmarkDotNet.Artifacts\**" />
     <EmbeddedResource Remove="BenchmarkDotNet.Artifacts\**" />
     <None Remove="BenchmarkDotNet.Artifacts\**" />
+
+    <Using Include="BenchmarkDotNet.Attributes" />
   </ItemGroup>
 
   <ItemGroup>
