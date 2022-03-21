@@ -16,7 +16,7 @@ namespace PerformanceTest
 
             // BenchmarkRunner.Run<ConcurrentSetTest>();
 
-            BenchmarkRunner.Run<JsonPrettifyTest>();
+            // BenchmarkRunner.Run<JsonPrettifyTest>();
             Console.Read();
         }
     }

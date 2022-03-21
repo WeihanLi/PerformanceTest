@@ -53,7 +53,7 @@ namespace PerformanceTest.DummyTests
             return new[]
             {
                 IsValueTypeUti.IsValueType1<string>(),
-                IsValueTypeUti.IsValueType1<ResultModel>(),
+                IsValueTypeUti.IsValueType1<Result>(),
                 IsValueTypeUti.IsValueType1<object>(),
                 IsValueTypeUti.IsValueType1<Action>(),
                 IsValueTypeUti.IsValueType1<EventBus>(),
@@ -66,7 +66,7 @@ namespace PerformanceTest.DummyTests
             return new[]
             {
                 IsValueTypeUti.IsValueType2<string>(),
-                IsValueTypeUti.IsValueType2<ResultModel>(),
+                IsValueTypeUti.IsValueType2<Result>(),
                 IsValueTypeUti.IsValueType2<object>(),
                 IsValueTypeUti.IsValueType2<Action>(),
                 IsValueTypeUti.IsValueType2<EventBus>(),
@@ -79,7 +79,7 @@ namespace PerformanceTest.DummyTests
             return new[]
             {
                 IsValueTypeUti.IsValueType3<string>(),
-                IsValueTypeUti.IsValueType3<ResultModel>(),
+                IsValueTypeUti.IsValueType3<Result>(),
                 IsValueTypeUti.IsValueType3<object>(),
                 IsValueTypeUti.IsValueType3<Action>(),
                 IsValueTypeUti.IsValueType3<EventBus>(),
