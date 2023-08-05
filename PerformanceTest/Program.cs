@@ -2,11 +2,10 @@
 // Licensed under the MIT license.
 
 using BenchmarkDotNet.Running;
-using PerformanceTest.CollectionTest;
 
 namespace PerformanceTest;
 
-public class Program
+public static class Program
 {
     public static void Main(string[] args)
     {
@@ -15,14 +14,13 @@ public class Program
         // BenchmarkRunner.Run<RedisSetMembersTest>();
         // BenchmarkRunner.Run<EnumerableEmptyTest>();
         // BenchmarkRunner.Run<DelegateInvokeTest>();
-
         // BenchmarkRunner.Run<ConcurrentSetTest>();
-
         // BenchmarkRunner.Run<JsonPrettifyTest>();
-
         // BenchmarkRunner.Run<DummyTests.StopwatchPerfTest>();
+        // BenchmarkRunner.Run<EnumerableChuckTest>();
+        
+        BenchmarkRunner.Run<TimeProviderLocalTimeTest>();
 
-        BenchmarkRunner.Run<EnumerableChuckTest>();
         Console.Read();
     }
 }
