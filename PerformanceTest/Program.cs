@@ -19,7 +19,8 @@ public static class Program
         // BenchmarkRunner.Run<DummyTests.StopwatchPerfTest>();
         // BenchmarkRunner.Run<EnumerableChuckTest>();
         
-        BenchmarkRunner.Run<TimeProviderLocalTimeTest>();
+        // BenchmarkRunner.Run<TimeProviderLocalTimeUtcTest>();
+        BenchmarkRunner.Run<TimeProviderLocalTimeNonUtcTest>();
 
         Console.Read();
     }
