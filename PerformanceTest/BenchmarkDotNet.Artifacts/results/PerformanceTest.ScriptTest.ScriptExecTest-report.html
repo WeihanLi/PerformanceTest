@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>PerformanceTest.ScriptTest.ScriptExecTest-20240424-231924</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.7, Windows 11 (10.0.22631.3447)
+Intel Core Ultra 7 155H, 1 CPU, 22 logical and 16 physical cores
+.NET SDK 9.0.100-preview.3.24204.13
+  [Host]     : .NET 8.0.4 (8.0.424.16909), X64 RyuJIT AVX2
+  DefaultJob : .NET 8.0.4 (8.0.424.16909), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>         Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio</th><th>RatioSD</th>
+</tr>
+</thead><tbody><tr><td>DotnetScriptSimple</td><td>211.1 ms</td><td>4.08 ms</td><td>4.53 ms</td><td>1.00</td><td>0.00</td>
+</tr><tr><td>DotnetExecSimple</td><td>201.9 ms</td><td>2.33 ms</td><td>2.18 ms</td><td>0.95</td><td>0.02</td>
+</tr><tr><td>DotnetScriptReference</td><td>227.5 ms</td><td>2.94 ms</td><td>2.75 ms</td><td>1.08</td><td>0.03</td>
+</tr><tr><td>DotnetExecReference</td><td>228.2 ms</td><td>2.20 ms</td><td>2.06 ms</td><td>1.08</td><td>0.03</td>
+</tr></tbody></table>
+</body>
+</html>
