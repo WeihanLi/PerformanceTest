@@ -17,7 +17,7 @@ public class ScriptExecTest
     [Benchmark]
     public int DotnetExecSimple()
     {
-        return CommandExecutor.ExecuteCommand("dotnet-script ./assets/hello.csx");
+        return CommandExecutor.ExecuteCommand("dotnet-exec ./assets/hello.csx");
     }
     
     [Benchmark]
@@ -29,6 +29,6 @@ public class ScriptExecTest
     [Benchmark]
     public int DotnetExecReference()
     {
-        return CommandExecutor.ExecuteCommand("dotnet-script ./assets/reference.csx");
+        return CommandExecutor.ExecuteCommand("dotnet-exec ./assets/reference.csx");
     }
 }
