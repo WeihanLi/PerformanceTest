@@ -8,9 +8,9 @@ Intel Core Ultra 7 155H, 1 CPU, 22 logical and 16 physical cores
 
 
 ```
-|                Method |     Mean |   Error |  StdDev | Ratio | RatioSD |
-|---------------------- |---------:|--------:|--------:|------:|--------:|
-|    DotnetScriptSimple | 211.1 ms | 4.08 ms | 4.53 ms |  1.00 |    0.00 |
-|      DotnetExecSimple | 201.9 ms | 2.33 ms | 2.18 ms |  0.95 |    0.02 |
-| DotnetScriptReference | 227.5 ms | 2.94 ms | 2.75 ms |  1.08 |    0.03 |
-|   DotnetExecReference | 228.2 ms | 2.20 ms | 2.06 ms |  1.08 |    0.03 |
+|                Method |       Mean |    Error |   StdDev | Ratio | RatioSD |
+|---------------------- |-----------:|---------:|---------:|------:|--------:|
+|    DotnetScriptSimple |   212.6 ms |  4.21 ms |  9.43 ms |  1.00 |    0.00 |
+|      DotnetExecSimple | 1,028.8 ms | 19.23 ms | 17.05 ms |  5.07 |    0.30 |
+| DotnetScriptReference |   229.0 ms |  1.74 ms |  1.63 ms |  1.12 |    0.07 |
+|   DotnetExecReference | 1,153.3 ms |  9.88 ms |  9.24 ms |  5.66 |    0.34 |
