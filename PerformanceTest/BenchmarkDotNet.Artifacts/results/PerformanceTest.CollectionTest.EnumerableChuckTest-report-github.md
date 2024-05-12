@@ -1,14 +1,14 @@
-``` ini
+```
 
-BenchmarkDotNet=v0.13.1, OS=Windows 10.0.22621
-Intel Core i5-6300U CPU 2.40GHz (Skylake), 1 CPU, 4 logical and 2 physical cores
-.NET SDK=7.0.100-preview.4.22252.9
-  [Host]     : .NET 6.0.5 (6.0.522.21309), X64 RyuJIT
-  DefaultJob : .NET 6.0.5 (6.0.522.21309), X64 RyuJIT
+BenchmarkDotNet v0.13.7, Windows 11 (10.0.22631.3527)
+Intel Core Ultra 7 155H, 1 CPU, 22 logical and 16 physical cores
+.NET SDK 9.0.100-preview.3.24204.13
+  [Host]     : .NET 8.0.4 (8.0.424.16909), X64 RyuJIT AVX2
+  DefaultJob : .NET 8.0.4 (8.0.424.16909), X64 RyuJIT AVX2
 
 
 ```
-|          Method |     Mean |    Error |   StdDev |   Gen 0 | Allocated |
-|---------------- |---------:|---------:|---------:|--------:|----------:|
-| DotNetImplement | 11.94 μs | 0.207 μs | 0.480 μs |  8.6823 |     13 KB |
-| CustomImplement | 41.18 μs | 0.805 μs | 0.862 μs | 28.0151 |     43 KB |
+|          Method |      Mean |     Error |    StdDev |   Gen0 |   Gen1 | Allocated |
+|---------------- |----------:|----------:|----------:|-------:|-------:|----------:|
+| DotNetImplement |  3.780 μs | 0.0748 μs | 0.0972 μs | 1.0834 | 0.0229 |  13.36 KB |
+| CustomImplement | 11.649 μs | 0.2228 μs | 0.2477 μs | 3.5095 | 0.1068 |     43 KB |

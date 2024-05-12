@@ -2,7 +2,7 @@
 // Licensed under the MIT license.
 
 using BenchmarkDotNet.Running;
-using PerformanceTest.ScriptTest;
+using PerformanceTest.DummyTests;
 
 // BenchmarkRunner.Run<RandomListPerfTest>();
 // BenchmarkRunner.Run<NewInstanceTest>();
@@ -17,4 +17,5 @@ using PerformanceTest.ScriptTest;
 // BenchmarkRunner.Run<TimeProviderLocalTimeUtcTest>();
 // BenchmarkRunner.Run<TimeProviderLocalTimeNonUtcTest>();
 
-BenchmarkRunner.Run<ScriptExecTest>();
+// BenchmarkRunner.Run<ScriptExecTest>();
+BenchmarkSwitcher.FromAssembly(typeof(ToHexStringTest).Assembly).Run(args);

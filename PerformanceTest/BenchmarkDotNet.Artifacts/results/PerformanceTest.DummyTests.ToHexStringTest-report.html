@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>PerformanceTest.TimeProviderLocalTimeNonUtcTest-20240513-002055</title>
+<title>PerformanceTest.DummyTests.ToHexStringTest-20240513-002655</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -22,10 +22,12 @@ Intel Core Ultra 7 155H, 1 CPU, 22 logical and 16 physical cores
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>      Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio</th><th>Allocated</th><th>Alloc Ratio</th>
+<thead><tr><th>       Method</th><th>Mean</th><th>Error</th><th>StdDev</th>
 </tr>
-</thead><tbody><tr><td>GetLocalNow</td><td>26.98 ns</td><td>0.242 ns</td><td>0.227 ns</td><td>1.00</td><td>-</td><td>NA</td>
-</tr><tr><td>GetLocalNow_Update</td><td>27.23 ns</td><td>0.183 ns</td><td>0.162 ns</td><td>1.01</td><td>-</td><td>NA</td>
+</thead><tbody><tr><td>ConvertToHexString</td><td>7.914 ns</td><td>0.0812 ns</td><td>0.0634 ns</td>
+</tr><tr><td>BitConverterConvert</td><td>86.960 ns</td><td>1.7135 ns</td><td>1.6829 ns</td>
+</tr><tr><td>StringJoin</td><td>128.956 ns</td><td>2.5967 ns</td><td>3.0912 ns</td>
+</tr><tr><td>StringAggregate</td><td>168.589 ns</td><td>3.3993 ns</td><td>3.9147 ns</td>
 </tr></tbody></table>
 </body>
 </html>

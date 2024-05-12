@@ -10,5 +10,5 @@ Intel Core Ultra 7 155H, 1 CPU, 22 logical and 16 physical cores
 ```
 |             Method |     Mean |    Error |   StdDev | Ratio | Allocated | Alloc Ratio |
 |------------------- |---------:|---------:|---------:|------:|----------:|------------:|
-|        GetLocalNow | 26.98 ns | 0.242 ns | 0.227 ns |  1.00 |         - |          NA |
-| GetLocalNow_Update | 27.23 ns | 0.183 ns | 0.162 ns |  1.01 |         - |          NA |
+|        GetLocalNow | 27.53 ns | 0.264 ns | 0.234 ns |  1.00 |         - |          NA |
+| GetLocalNow_Update | 26.22 ns | 0.172 ns | 0.161 ns |  0.95 |         - |          NA |
