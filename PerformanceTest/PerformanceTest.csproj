@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="BenchmarkDotNet" Version="0.13.7" />
-    <PackageReference Include="WeihanLi.Common" Version="1.0.64" />
+    <PackageReference Include="BenchmarkDotNet" Version="0.14.0" />
+    <PackageReference Include="WeihanLi.Common" Version="1.0.71" />
     <PackageReference Include="WeihanLi.Redis" Version="1.9.0" />
   </ItemGroup>
 
