@@ -10,7 +10,7 @@ namespace PerformanceTest;
 [MemoryDiagnoser]
 public class StopwatchElapsedTimeTest
 {
-    private static readonly long StartTime = System.Diagnostics.Stopwatch.GetTimestamp();
+    private static readonly long StartTime = Stopwatch.GetTimestamp();
     
     [Benchmark(Baseline = true)]
     public TimeSpan StopwatchTest()
