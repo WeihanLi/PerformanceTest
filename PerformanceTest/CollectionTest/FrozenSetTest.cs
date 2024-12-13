@@ -9,7 +9,7 @@ namespace PerformanceTest.CollectionTest;
 
 [MemoryDiagnoser]
 [SimpleJob]
-[GroupBenchmarksBy(BenchmarkLogicalGroupRule.ByCategory), CategoriesColumn]
+[GroupBenchmarksBy(BenchmarkLogicalGroupRule.ByCategory), CategoriesColumn] // https://github.com/dotnet/BenchmarkDotNet/issues/617#issuecomment-786062354
 public class FrozenSetTest
 {
     private HashSet<string> _hashSet;
