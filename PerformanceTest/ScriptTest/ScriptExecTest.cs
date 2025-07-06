@@ -5,7 +5,7 @@ using WeihanLi.Common.Helpers;
 
 namespace PerformanceTest.ScriptTest;
 
-[SimpleJob, ShortRunJob]
+[ShortRunJob]
 public class ScriptExecTest
 {
     [Benchmark(Baseline = true)]
