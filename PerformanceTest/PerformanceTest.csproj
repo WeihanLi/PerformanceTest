@@ -4,7 +4,7 @@
     <Optimize>true</Optimize>
     <OutputType>Exe</OutputType>
     <ImplicitUsings>enable</ImplicitUsings>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="BenchmarkDotNet" Version="0.14.0" />
-    <PackageReference Include="WeihanLi.Common" Version="1.0.79" />
+    <PackageReference Include="BenchmarkDotNet" Version="0.15.6" />
+    <PackageReference Include="WeihanLi.Common" Version="1.0.83" />
     <PackageReference Include="WeihanLi.Redis" Version="1.9.0" />
   </ItemGroup>
 
