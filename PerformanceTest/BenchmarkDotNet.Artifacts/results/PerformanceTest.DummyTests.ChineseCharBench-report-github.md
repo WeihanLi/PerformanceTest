@@ -10,7 +10,7 @@ Job=ShortRun  IterationCount=3  LaunchCount=1
 WarmupCount=3  
 
 ```
-| Method | Mean     | Error    | StdDev   | Ratio | RatioSD | Gen0   | Allocated | Alloc Ratio |
-|------- |---------:|---------:|---------:|------:|--------:|-------:|----------:|------------:|
-| OldWay | 349.4 ns | 428.4 ns | 23.48 ns |  2.28 |    0.17 | 0.0863 |    1088 B |        3.40 |
-| NewWay | 153.3 ns | 153.8 ns |  8.43 ns |  1.00 |    0.07 | 0.0253 |     320 B |        1.00 |
+| Method | Mean      | Error     | StdDev   | Ratio | RatioSD | Gen0   | Allocated | Alloc Ratio |
+|------- |----------:|----------:|---------:|------:|--------:|-------:|----------:|------------:|
+| OldWay | 202.37 ns | 45.210 ns | 2.478 ns |  5.70 |    0.06 | 0.0610 |     768 B |          NA |
+| NewWay |  35.50 ns |  2.044 ns | 0.112 ns |  1.00 |    0.00 |      - |         - |          NA |

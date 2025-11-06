@@ -13,28 +13,28 @@ using BenchmarkDotNet.Attributes;
 public class ChineseCharBench
 {
     private const string Input = "漢字简繁转换性能测试ABC123";
+    private readonly string ZhTw = Input.ToZhTw();
+    private readonly string ZhCn = Input.ToZhCn();
 
     [Benchmark]
     public int OldWay()
     {
-        var traditional = Input.ToZhTw();
-        var simple = Input.ToZhCn();
         int t = 0, s = 0;
 
         foreach (var c in Input)
         {
-            if (traditional.Contains(c.ToString())) t++;
-            if (simple.Contains(c.ToString())) s++;
+            if (ZhTw.Contains(c.ToString())) t++;
+            if (ZhCn.Contains(c.ToString())) s++;
         }
 
-        return t + s;
+        return t - s;
     }
 
     [Benchmark(Baseline = true)]
     public int NewWay()
     {
-        var traditional = Input.ToZhTw().AsSpan();
-        var simple = Input.ToZhCn().AsSpan();
+        var traditional = ZhTw.AsSpan();
+        var simple = ZhCn.AsSpan();
         int t = 0, s = 0;
 
         foreach (var c in Input)
@@ -43,7 +43,7 @@ public class ChineseCharBench
             if (simple.Contains(c)) s++;
         }
 
-        return t + s;
+        return t - s;
     }
 }
 
