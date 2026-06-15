@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>PerformanceTest.ScriptTest.ScriptExecTest-20250706-102108</title>
+<title>PerformanceTest.ScriptTest.ScriptExecTest-20260615-082155</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -13,26 +13,21 @@
 </head>
 <body>
 <pre><code>
-BenchmarkDotNet v0.14.0, Windows 11 (10.0.26100.4351)
-Intel Core Ultra 7 155H, 1 CPU, 22 logical and 16 physical cores
-.NET SDK 10.0.100-preview.5.25277.114
-  [Host]     : .NET 9.0.6 (9.0.625.26613), X64 RyuJIT AVX2
-  DefaultJob : .NET 9.0.6 (9.0.625.26613), X64 RyuJIT AVX2
-  ShortRun   : .NET 9.0.6 (9.0.625.26613), X64 RyuJIT AVX2
+BenchmarkDotNet v0.15.8, Windows 11 (10.0.26200.8655/25H2/2025Update/HudsonValley2)
+Intel Core Ultra 7 155H 1.40GHz, 1 CPU, 22 logical and 16 physical cores
+.NET SDK 11.0.100-preview.5.26302.115
+  [Host]     : .NET 10.0.9 (10.0.9, 10.0.926.27113), X64 RyuJIT x86-64-v3
+  DefaultJob : .NET 10.0.9 (10.0.9, 10.0.926.27113), X64 RyuJIT x86-64-v3
 </code></pre>
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>Method         </th><th>Job </th><th>IterationCount</th><th>LaunchCount</th><th>WarmupCount</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio</th><th>RatioSD</th>
+<thead><tr><th>Method         </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio</th><th>RatioSD</th>
 </tr>
-</thead><tbody><tr><td>DotnetScriptSimple</td><td>DefaultJob</td><td>Default</td><td>Default</td><td>Default</td><td>215.1 ms</td><td>1.68 ms</td><td>1.49 ms</td><td>1.00</td><td>0.01</td>
-</tr><tr><td>DotnetExecSimple</td><td>DefaultJob</td><td>Default</td><td>Default</td><td>Default</td><td>1,650.1 ms</td><td>32.72 ms</td><td>49.97 ms</td><td>7.67</td><td>0.23</td>
-</tr><tr><td>DotnetScriptReference</td><td>DefaultJob</td><td>Default</td><td>Default</td><td>Default</td><td>277.1 ms</td><td>5.51 ms</td><td>15.72 ms</td><td>1.29</td><td>0.07</td>
-</tr><tr><td>DotnetExecReference</td><td>DefaultJob</td><td>Default</td><td>Default</td><td>Default</td><td>2,051.2 ms</td><td>40.56 ms</td><td>37.94 ms</td><td>9.53</td><td>0.18</td>
-</tr><tr><td>DotnetScriptSimple</td><td>ShortRun</td><td>3</td><td>1</td><td>3</td><td>250.0 ms</td><td>22.86 ms</td><td>1.25 ms</td><td>1.00</td><td>0.01</td>
-</tr><tr><td>DotnetExecSimple</td><td>ShortRun</td><td>3</td><td>1</td><td>3</td><td>1,931.3 ms</td><td>1,406.51 ms</td><td>77.10 ms</td><td>7.73</td><td>0.27</td>
-</tr><tr><td>DotnetScriptReference</td><td>ShortRun</td><td>3</td><td>1</td><td>3</td><td>275.2 ms</td><td>194.62 ms</td><td>10.67 ms</td><td>1.10</td><td>0.04</td>
-</tr><tr><td>DotnetExecReference</td><td>ShortRun</td><td>3</td><td>1</td><td>3</td><td>2,263.5 ms</td><td>2,225.83 ms</td><td>122.01 ms</td><td>9.06</td><td>0.42</td>
+</thead><tbody><tr><td>DotnetScriptSimple</td><td>308.0 ms</td><td>5.45 ms</td><td>5.10 ms</td><td>1.00</td><td>0.02</td>
+</tr><tr><td>DotnetExecSimple</td><td>1,837.5 ms</td><td>13.40 ms</td><td>12.54 ms</td><td>5.97</td><td>0.10</td>
+</tr><tr><td>DotnetScriptReference</td><td>360.1 ms</td><td>7.08 ms</td><td>8.95 ms</td><td>1.17</td><td>0.03</td>
+</tr><tr><td>DotnetExecReference</td><td>1,976.6 ms</td><td>15.52 ms</td><td>14.52 ms</td><td>6.42</td><td>0.11</td>
 </tr></tbody></table>
 </body>
 </html>
